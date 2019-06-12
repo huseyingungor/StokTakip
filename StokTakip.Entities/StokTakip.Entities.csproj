@@ -40,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\T_KULLANICI.cs" />
+    <Compile Include="Concrete\T_KULLANICI_TIPI.cs" />
+    <Compile Include="Concrete\T_URUN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StokTakip.Core\StokTakip.Core.csproj">
+      <Project>{B8E21F29-87B3-4ABC-9EAA-8D6E7BCCD40F}</Project>
+      <Name>StokTakip.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
