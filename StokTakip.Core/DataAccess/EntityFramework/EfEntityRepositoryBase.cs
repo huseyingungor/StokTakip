@@ -51,7 +51,7 @@ namespace StokTakip.Core.DataAccess.EntityFramework
 
         public void Update(TEntity entity)
         {
-            using(var context=new TContext())
+            using (var context = new TContext())
             {
                 var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
