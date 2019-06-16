@@ -43,6 +43,8 @@
     <Compile Include="Concrete\Kullanici.cs" />
     <Compile Include="Concrete\KullaniciTipi.cs" />
     <Compile Include="Concrete\Urun.cs" />
+    <Compile Include="Other\Enumarations.cs" />
+    <Compile Include="Other\IslemSonuc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
