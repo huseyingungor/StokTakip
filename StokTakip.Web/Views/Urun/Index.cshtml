@@ -1,22 +1,51 @@
 ﻿@model StokTakip.Web.Models.UrunListViewModel
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<table>
+<table class="table">
     <tr>
         <th>Ürün Adı</th>
         <th>Ürün Açıklaması</th>
         <th>Stok</th>
         <th>Fiyat</th>
+        <th>İşlemler</th>
     </tr>
     @foreach (var item in Model.Urunler)
     {
-        <tr>
+        <tr data-id="@item.ID">
             <td>@item.ADI</td>
             <td>@item.ACIKLAMA</td>
             <td>@item.STOK</td>
-            <td>@item.FIYAT</td>
+            <td>@item.FIYAT ₺</td>
+            <td>
+                <button class="btn btn-outline-success" id="btnStokArttir">Stok Arttır</button>
+                <button class="btn btn-outline-danger" id="btnStokAzalt">Stok Azalt</button>
+                <button class="btn btn-outline-danger" onclick="UrunSil(@item.ID)">Ürünü Sil</button>
+            </td>
         </tr>
     }
 </table>
+
+<script>
+    function UrunSil(id) {
+        showProgress();
+        $.ajax({
+            type: 'POST',
+            url: '/Urun/UrunSil',
+            data: {
+                id: id
+            },
+            success: function (sonuc) {
+                hideProgress();
+                if (sonuc.tur == 2) {
+                    toastr.error(sonuc.aciklama);
+                } else {
+                    toastr.success(sonuc.aciklama);
+                    $('[data-id=' + id + ']').remove();
+                }
+            }
+        });
+    };
+</script>

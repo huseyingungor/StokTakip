@@ -1,9 +1,6 @@
 ﻿using StokTakip.Entities.Concrete;
-using System;
+using StokTakip.Entities.Other;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StokTakip.Business.Abstract
 {
@@ -11,5 +8,6 @@ namespace StokTakip.Business.Abstract
     {
         List<Urun> GetAll();
         Urun GetById(int id);
+        IslemSonuc UrunSil(int id);
     }
 }

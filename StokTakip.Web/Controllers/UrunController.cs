@@ -25,10 +25,10 @@ namespace StokTakip.Web.Controllers
             });
         }
 
-        public IActionResult Index2()
+        [HttpPost]
+        public JsonResult UrunSil(int id)
         {
-            var moddel = _urunService.GetById(1);
-            return View(moddel);
+            return Json(_urunService.UrunSil(id));
         }
     }
 }
