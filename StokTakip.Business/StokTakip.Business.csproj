@@ -40,7 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IUrunService.cs" />
+    <Compile Include="Concrete\UrunManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StokTakip.Core\StokTakip.Core.csproj">
+      <Project>{B8E21F29-87B3-4ABC-9EAA-8D6E7BCCD40F}</Project>
+      <Name>StokTakip.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StokTakip.DataAccess\StokTakip.DataAccess.csproj">
+      <Project>{43598A55-5BBE-4801-9D53-8234FFD5B065}</Project>
+      <Name>StokTakip.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StokTakip.Entities\StokTakip.Entities.csproj">
+      <Project>{60E1B11F-4B37-443A-B357-D45BD20101E7}</Project>
+      <Name>StokTakip.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

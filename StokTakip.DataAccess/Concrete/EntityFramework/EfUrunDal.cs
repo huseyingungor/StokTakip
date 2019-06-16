@@ -4,7 +4,7 @@ using StokTakip.Entities.Concrete;
 
 namespace StokTakip.DataAccess.Concrete.EntityFramework
 {
-    public class EfUrunDal : EfEntityRepositoryBase<T_URUN, StokTakipContext>, IUrunDal
+    public class EfUrunDal : EfEntityRepositoryBase<Urun, StokTakipContext>, IUrunDal
     {
     }
 }

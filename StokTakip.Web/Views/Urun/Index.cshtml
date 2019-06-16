@@ -1,0 +1,22 @@
+﻿@model StokTakip.Web.Models.UrunListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table>
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Ürün Açıklaması</th>
+        <th>Stok</th>
+        <th>Fiyat</th>
+    </tr>
+    @foreach (var item in Model.Urunler)
+    {
+        <tr>
+            <td>@item.ADI</td>
+            <td>@item.ACIKLAMA</td>
+            <td>@item.STOK</td>
+            <td>@item.FIYAT</td>
+        </tr>
+    }
+</table>

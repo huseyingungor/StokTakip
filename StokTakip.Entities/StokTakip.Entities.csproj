@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\T_KULLANICI.cs" />
-    <Compile Include="Concrete\T_KULLANICI_TIPI.cs" />
-    <Compile Include="Concrete\T_URUN.cs" />
+    <Compile Include="Concrete\Kullanici.cs" />
+    <Compile Include="Concrete\KullaniciTipi.cs" />
+    <Compile Include="Concrete\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +50,9 @@
       <Project>{B8E21F29-87B3-4ABC-9EAA-8D6E7BCCD40F}</Project>
       <Name>StokTakip.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,7 +3,7 @@ using StokTakip.Entities.Concrete;
 
 namespace StokTakip.DataAccess.Abstract
 {
-    public interface IKullaniciDal : IEntityRepository<T_KULLANICI>
+    public interface IKullaniciDal : IEntityRepository<Kullanici>
     {
     }
 }

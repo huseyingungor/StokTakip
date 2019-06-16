@@ -3,7 +3,7 @@ using StokTakip.Entities.Concrete;
 
 namespace StokTakip.DataAccess.Abstract
 {
-    public interface IUrunDal : IEntityRepository<T_URUN>
+    public interface IUrunDal : IEntityRepository<Urun>
     {
     }
 }

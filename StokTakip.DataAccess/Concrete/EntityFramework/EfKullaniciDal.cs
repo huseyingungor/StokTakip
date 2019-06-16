@@ -4,7 +4,7 @@ using StokTakip.Entities.Concrete;
 
 namespace StokTakip.DataAccess.Concrete.EntityFramework
 {
-    public class EfKullaniciDal : EfEntityRepositoryBase<T_KULLANICI, StokTakipContext>, IKullaniciDal
+    public class EfKullaniciDal : EfEntityRepositoryBase<Kullanici, StokTakipContext>, IKullaniciDal
     {
     }
 }
